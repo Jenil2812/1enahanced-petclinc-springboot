@@ -16,20 +16,12 @@ spec:
     spec:
       containers:
       - name: springboot-app
-        image: jenkinsspringbootpetclini.azurecr.io/springbootapp:v1
+        image:  jenkinsspringbootpetclini.azurecr.io/springbootapp:v1
         ports:
         - containerPort: 8080
-        resources:
-          requests:
-            cpu: "100m"
-            memory: "256Mi"
-            ephemeral-storage: "512Mi"
-          limits:
-            cpu: "500m"
-            memory: "512Mi"
-            ephemeral-storage: "1Gi"
       imagePullSecrets:
       - name: acr-auth
+
 ---
 apiVersion: v1
 kind: Service
